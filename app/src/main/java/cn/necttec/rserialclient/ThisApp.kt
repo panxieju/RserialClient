@@ -10,7 +10,7 @@ import org.acra.annotation.ReportsCrashes
 import org.acra.sender.HttpSender
 
 @ReportsCrashes(
-formUri = "http://39.108.51.140/crash/crash_report.php",
+formUri = "http://www.nexttec.cn/crash/crash_report.php",
 reportType = HttpSender.Type.JSON,
 httpMethod = HttpSender.Method.POST,
 //formUriBasicAuthLogin = "username",
