@@ -16,6 +16,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import cn.necttec.rserialclient.Utils.lf
 import cn.necttec.rserialclient.Utils.toast
 import cn.necttec.rserialclient.presenter.IRSCPresenter
 import cn.necttec.rserialclient.presenter.RSCPresenter
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity(), IRSCPresenter {
     private lateinit var presenter: RSCPresenter
     private lateinit var handler: Handler
     private var rcvData:String = ""
+    private var data:String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,6 +49,9 @@ class MainActivity : AppCompatActivity(), IRSCPresenter {
                 }
             }
         }
+
+        this.lf("Start RserialClient")
+        this.lf("OK")
 
         val fab = findViewById<View>(R.id.fab) as FloatingActionButton
         fab.setOnClickListener { view ->
